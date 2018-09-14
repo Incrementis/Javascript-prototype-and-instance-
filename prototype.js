@@ -15,10 +15,10 @@
 //LISTS
 //========================
 
-var listOfNames 	= ["John",		"Deniz",		"Sakura",			"Anna", 	"Imani" ];
+var listOfNames 	= ["John",	"Deniz",		"Sakura",			"Anna", 	"Imani" ];
 var listOfColor 	= ["Black", 	"Blonde", 		"Mixed",			"Red",		"White"	];
 var listOfBodySize 	= ["Small", 	"Big", 			"Medium",			"Strong",	"Weak"];
-var listOfWalk 		= ["Slow", 		"Fast", 		"Straddle-Legged",	"Sneaking",	"Crawling"];
+var listOfWalk 		= ["Slow", 	"Fast", 		"Straddle-Legged",		"Sneaking",	"Crawling"];
 
 
 
