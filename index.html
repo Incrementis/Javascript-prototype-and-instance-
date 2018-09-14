@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+	
+		<title>Prototype and Instance</title>
+		<meta charset = "UTF-8">
+	
+	</head>
+	
+	
+	<!--
+		NOTE:
+		===============================================================================================
+		
+		Because of simplicity & demonstration purposes, the "style" attribute is used within html tags.
+		Nevertheless it is recommended to use CSS for styling.
+		
+		In '<body>' the 'style="text-align:center;"' 
+		centers similar like the tag '<center>' which was used in the previous mini-projects.
+		
+		The '<button>' tag attributes are put into new lines, to improve the readability.
+		
+		===============================================================================================
+	-->
+	
+	<body style="text-align:center; margin-left:auto; margin-right:auto;">
+	
+		<section>
+			
+			<h2 style="color:magenta;">Parents</h2>
+				
+			<div style="display:inline;">
+			
+				<img src="Parent.jpg" alt="ERROR: No parent image found!" style="width:15%; height:15%;">
+				
+			</div>
+			
+			
+			<div style="display:inline-block;">
+				
+					<input class="parents-attributes" type="checkbox" value="Name">			Name		<br>
+					<input class="parents-attributes" type="checkbox" value="Haircolor">	Haircolor	<br>
+					<input class="parents-attributes" type="checkbox" value="Size">			Size		<br>
+				
+			</div>
+			
+			
+			
+			<br>
+			<br>
+			<button style="	border:none; 
+							background-color:green;
+							height:25px;
+							width:100px;" onclick="makeChild();" >MAKE</button>
+			
+			
+			
+			
+			<br>
+			<br>
+			<br>
+			<h2 style="color:magenta;">Child</h2>
+			
+			<div style="display:inline;">
+			
+				<img src="Child.jpg" alt="ERROR: No parent image found!" style="width:15%; height:15%;">
+				
+			</div>
+			
+			
+			
+			<div id="child" style="display:inline-block;visibility:hidden;">		
+					
+					<input class="child-attributes" type="checkbox" onclick="Walk()">			Walk<br>
+					
+					<button class="child-attributes" type="checkbox" onclick="Child.Talk();">	Talk(tell real name)</button>
+						
+			</div>
+			
+			
+		
+			<br>
+			<br>
+			<br>
+			<h2 style="color:magenta;">Explanation</h2>
+			
+			<div style="border:solid 1px black; width:33%; display:inline-block">
+			
+				I can explain!<br><br>
+				
+				<div class="explanation"></div>
+				
+				
+				<div class="explanation"></div>
+
+			
+			</div>
+		
+		</section>
+	
+	
+	<br>
+	<br>
+	<section>
+	
+		<hr width="50%">
+		
+		<br>
+		<br>
+		For more explanation please visit - 
+		<a href = "https://github.com/Incrementis/Javascript-prototype-and-instance-/wiki"> 
+		Prototype and instance Wiki</a>
+		
+	</section>
+		
+
+	</body>
+
+	
+	
+	<footer>
+	
+		<script language = "javascript" type = "text/javascript" src = "prototype.js"></script>
+	
+	</footer>
+	 
+
+</html>
