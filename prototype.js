@@ -78,17 +78,33 @@ function makeChild()
 		{
 			Parents.prototype.Name = name;
 		}
+		else
+		{
+			//Deletes property!!!
+			delete Parents.prototype.Name;
+		}
+		
 		
 		//Haircolor
 		if(parentsCheckboxes[1].checked)
 		{
 			Parents.prototype.HairColor = haircolor;
 		}
+		else
+		{
+			//Deletes property!!!
+			delete Parents.prototype.HairColor
+		}
+		
 		
 		//Size
 		if(parentsCheckboxes[2].checked)
 		{
 			Parents.prototype.Size = size;
+		}
+		else
+		{
+			delete Parents.prototype.Size;
 		}
 
 		
