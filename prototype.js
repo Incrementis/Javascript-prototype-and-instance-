@@ -104,6 +104,7 @@ function makeChild()
 		}
 		else
 		{
+			//Deletes property!!!
 			delete Parents.prototype.Size;
 		}
 
@@ -117,8 +118,6 @@ function makeChild()
 		
 		//A child is born 
 		Child = new Parents();
-		
-		conceived = true;
 		
 		
 		//Activate choosable child attributes
@@ -170,16 +169,18 @@ function Walk()
 		
 		explanation[1].innerHTML += "<b>Walk:</b>" 	+ Child.Walk 		+ "<br>";
 		
-		//MONITOR
-		//console.dir(Parents);
-		//console.dir(Child);
-
 	}
 	else
 	{
 		//Reset
 		explanation[1].innerHTML = '';
-
+		
+		//Deletes property!!!
+		delete Child.Walk;
 	}
+	
+	//MONITOR
+	//console.dir(Parents);
+	//console.dir(Child);
 
 }
