@@ -15,17 +15,17 @@
 //LISTS
 //========================
 
-var listOfNames 	= ["John",		"Deniz",		"Sakura",			"Anna", 	"Imani" ];
+var listOfNames 	= ["John",	"Deniz",		"Sakura",			"Anna", 	"Imani" ];
 var listOfColor 	= ["Black", 	"Blonde", 		"Mixed",			"Red",		"White"	];
 var listOfBodySize 	= ["Small", 	"Big", 			"Medium",			"Strong",	"Weak"];
-var listOfWalk 		= ["Slow", 		"Fast", 		"Straddle-Legged",	"Sneaking",	"Crawling"];
+var listOfWalk 		= ["Slow", 	"Fast", 		"Straddle-Legged",		"Sneaking",	"Crawling"];
 
 
 
 //Purpose: Random attributes generator
 var RandomElementFrom = function(List)
 {
-	//Pseudo random number between 0 and 5
+	//Pseudo random number between 0 and 4
 	var attribute = Math.floor(Math.random() * 5);
 	
 	return List[attribute];
@@ -52,12 +52,12 @@ function makeChild()
 {
 	//Init Variables
 	var conceived 			= false;
-	var parentsCheckboxes 	= document.getElementsByClassName('parents-attributes');
-	var childCheckboxes 	= document.getElementsByClassName('child-attributes');
-	var choosableAttributes	= document.getElementById('child');
-	var name				= RandomElementFrom(listOfNames);		
+	var parentsCheckboxes 		= document.getElementsByClassName('parents-attributes');
+	var childCheckboxes 		= document.getElementsByClassName('child-attributes');
+	var choosableAttributes		= document.getElementById('child');
+	var name			= RandomElementFrom(listOfNames);		
 	var haircolor			= RandomElementFrom(listOfColor);	
-	var size				= RandomElementFrom(listOfBodySize);
+	var size			= RandomElementFrom(listOfBodySize);
 	var explanation			= document.getElementsByClassName('explanation');
 	
 	
@@ -78,17 +78,33 @@ function makeChild()
 		{
 			Parents.prototype.Name = name;
 		}
+		else
+		{
+			//Deletes property!!!
+			delete Parents.prototype.Name;
+		}
+		
 		
 		//Haircolor
 		if(parentsCheckboxes[1].checked)
 		{
 			Parents.prototype.HairColor = haircolor;
 		}
+		else
+		{
+			//Deletes property!!!
+			delete Parents.prototype.HairColor
+		}
+		
 		
 		//Size
 		if(parentsCheckboxes[2].checked)
 		{
 			Parents.prototype.Size = size;
+		}
+		else
+		{
+			delete Parents.prototype.Size;
 		}
 
 		
@@ -140,11 +156,11 @@ function makeChild()
 
 
 
-//Purpose: Sets and unsets child walk attribute
+//Purpose: Sets and unsets child`s walk attribute
 function Walk()
 {
 	var childCheckboxes 	= document.getElementsByClassName('child-attributes');
-	var explanation			= document.getElementsByClassName('explanation');
+	var explanation		= document.getElementsByClassName('explanation');
 
 	
 	if(childCheckboxes[0].checked === true)
