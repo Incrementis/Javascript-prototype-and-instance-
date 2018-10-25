@@ -51,7 +51,6 @@ var Child;
 function makeChild()
 {
 	//Init Variables
-	var conceived 			= false;
 	var parentsCheckboxes 		= document.getElementsByClassName('parents-attributes');
 	var childCheckboxes 		= document.getElementsByClassName('child-attributes');
 	var choosableAttributes		= document.getElementById('child');
